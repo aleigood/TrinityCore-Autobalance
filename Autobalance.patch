@@ -58,9 +58,6 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +
 +float ScriptMgr::VAS_Script_Hooks() {
 +    float VAS_Script_Hook_Version = 1.03f;
-+//    TC_LOG_DEBUG(LOG_FILTER_WORLDSERVER, "------------------------------------------------------------");
-+//    TC_LOG_DEBUG(LOG_FILTER_WORLDSERVER, "  Powered by {VAS} Script Hooks v%4.2f : Updated by Natfoth",VAS_Script_Hook_Version);
-+//    TC_LOG_DEBUG(LOG_FILTER_WORLDSERVER, "--------------------------------------------------------------");
 +    return VAS_Script_Hook_Version;
 +}
 +
@@ -1325,7 +1322,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +
 +    static bool HandleABSetOffsetCommand(ChatHandler *handler, const char *args) {
 +        if (!*args) {
-+            handler->PSendSysMessage(".autobalance setoffset #");
++            handler->PSendSysMessage(".vas setoffset #");
 +            handler->PSendSysMessage("Sets the Player Difficulty Offset for instances. Example: (You + offset(1) = 2 player difficulty).");
 +            return false;
 +        }
