@@ -955,7 +955,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        if (Player * playerHandle = playerIteration->GetSource()) {
 +                            ChatHandler chatHandle = ChatHandler(playerHandle->GetSession());
 +                            chatHandle.PSendSysMessage("|cffFF0000 [AutoBalance]|r|cffFF8000 %s entered the Instance %s. Auto setting player count to %u (Player Difficulty Offset = %u) |r",
-+                                                       player->GetName().c_str(), map->GetMapName(), mapABInfo->playerCount + PlayerCountDifficultyOffset);
++                                                       player->GetName().c_str(), map->GetMapName(), mapABInfo->playerCount + PlayerCountDifficultyOffset, PlayerCountDifficultyOffset);
 +                        }
 +                    }
 +                }
@@ -992,7 +992,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 +                        if (Player * playerHandle = playerIteration->GetSource()) {
 +                            ChatHandler chatHandle = ChatHandler(playerHandle->GetSession());
 +                            chatHandle.PSendSysMessage("|cffFF0000 [-AutoBalance]|r|cffFF8000 %s left the Instance %s. Auto setting player count to %u (Player Difficulty Offset = %u) |r",
-+                                                       player->GetName().c_str(), map->GetMapName(), mapABInfo->playerCount);
++                                                       player->GetName().c_str(), map->GetMapName(), mapABInfo->playerCount, PlayerCountDifficultyOffset);
 +                        }
 +                    }
 +                }
